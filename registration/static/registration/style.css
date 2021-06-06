@@ -1,0 +1,86 @@
+body {
+    font-family: Helvetica, sans-serif;
+    color:#481914;
+    background-color:white;
+}
+
+.container{
+    text-align:left;
+    
+}
+input{
+    margin:10px;
+    border-radius:30px;
+   
+    padding:7px;
+    padding-left:10px;
+    border-width:0.25px;
+    width:200px;
+}
+
+
+#bio {
+    font-family:Helvetica, sans-serif;
+    width: 50%;
+    height: 100px;
+    padding:8px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    resize: none;
+}
+
+textarea{
+        margin:10px;
+        border-radius:15px;
+        padding:5px;
+        padding-left:10px;
+        border-width:0.25px;
+}
+
+h1 {padding-top:10px;}
+
+#submit{
+    width:150px;
+    color:white;
+    background-color:#481914;
+    padding: 10px;
+    text-align:center;
+    border-width:0px;
+    border-radius:30px;
+    padding-left:20px;
+    padding-right:20px;
+    margin-top:20px;
+}
+
+*:focus {
+    outline: none;
+}
+
+#register {
+    background-color: white;
+    padding-left:70px; 
+}
+
+
+.row{ display: flex;}
+
+.col-1 {flex-basis: 8.33%;} /* width works too */
+.col-2 {flex-basis: 16.66%;}
+.col-3 {flex-basis: 25%;}
+.col-4 {flex-basis: 33.33%;}
+.col-5 {flex-basis: 41.66%;}
+.col-6 {flex-basis: 50%;}
+.col-7 {flex-basis: 58.33%;}
+.col-8 {flex-basis: 66.66%;}
+.col-9 {flex-basis: 75%;}
+.col-10 {flex-basis: 83.33%;}
+.col-11 {flex-basis: 91.66%;}
+.col-12 {flex-basis: 100%;}
+
+img {
+    padding:30px;
+    position: 50px 50px;
+    object-fit:cover;
+    height:700px;
+
+}

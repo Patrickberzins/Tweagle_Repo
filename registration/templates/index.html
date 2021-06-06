@@ -1,0 +1,69 @@
+<!DOCTYPE htlm>
+<html lanf = "en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, intial scale=1.0">
+    <title>New User Registration</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'registration/style.css' %}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div id="image" class="row">
+            <div class="col-6">
+                {% load static %}
+                <img src="{% static 'registration/images/Gasson_sunset.jpg' %}" alt="Gasson" width=100%>
+            </div>
+
+            <div id="register" class="col-6">
+                <h1><strong>Create a New Account</strong></h1><br>
+                <form action="/action_page.php">
+                    <label for="fname"><span style="color:red">*</span>First name:</label><br>
+                    <input type="text" id="first_name" name="fname" placeholder="John" required><br>
+                    <label for="lname"><span style="color:red">*</span>Last name::</label><br>
+                    <input type="text" id="last_name" name="lname" placeholder="Doe" required><br>
+                    <label for="email"><span style="color:red">*</span>Email:</label><br>
+                    <input type="text" id="email" name="email" placeholder="JohnDoe@bc.edu" required pattern=".+@bc.edu" title="Must be a BC email address"><br>
+                    <label for="email"><span style="color:red">*</span>Confirm Email:</label><br>
+                    <input type="text" id="email_confirm" name="email_confirm" placeholder="JohnDoe@bc.edu" required pattern=".+@bc.edu"><br>
+                    <label for="password"><span style="color:red">*</span>Password:</label><br>
+
+                    <script language='javascript' type='text/javascript'>
+                        function check(input) {
+                            if (input.value != document.getElementById('email').value) {
+                                input.setCustomValidity('Emails Must be Matching.');
+                            } else {
+                                input.setCustomValidity('');
+                            }
+                        }
+                    </script>
+
+                    <input type="password" id="password" name="password" placeholder="*****" required><br>
+                    <label for="pass_confirm"><span style="color:red">*</span>Confirm Password:</label><br>
+                    <input type="password" id="pass_confirm" name="pass_confirm" placeholder="*****" required oninput="check(this)"><br>
+
+                    <script language='javascript' type='text/javascript'>
+                        function check(input) {
+                            if (input.value != document.getElementById('password').value) {
+                                input.setCustomValidity('Passwords Must be Matching.');
+                            } else {
+                                input.setCustomValidity('');
+                            }
+                        }
+                    </script>
+
+                    <label for="bio"> Bio: </label><br>
+                    <textarea id="bio" name="bio" rows="4" cols="50" placeholder="Say something about yourself...">
+                        </textarea><br>
+                    <input id="submit" type="submit" value="Create Account">
+                </form>
+            </div> 
+         </div>
+      </div>
+</body>
+</html>
